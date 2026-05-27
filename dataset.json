@@ -1,0 +1,322 @@
+[
+  {
+    "id": "bug-001",
+    "category": "edge-case",
+    "function_name": "calculate_average",
+    "broken_code": "def calculate_average(nums):\n    total = 0\n    for n in nums:\n        total += n\n    return total / len(nums)\n",
+    "description": "This function crashes on empty lists",
+    "hint": "Consider edge cases for the input"
+  },
+  {
+    "id": "bug-002",
+    "category": "off-by-one",
+    "function_name": "sum_first_n",
+    "broken_code": "def sum_first_n(nums, n):\n    total = 0\n    for i in range(n + 1):\n        total += nums[i]\n    return total\n",
+    "description": "The function sums one too many items",
+    "hint": "Check the loop boundary"
+  },
+  {
+    "id": "bug-003",
+    "category": "logic",
+    "function_name": "is_palindrome",
+    "broken_code": "def is_palindrome(text):\n    cleaned = text.lower().replace(\" \", \"\")\n    return cleaned == text[::-1]\n",
+    "description": "The cleaned string is compared to the uncleaned reverse",
+    "hint": "Compare equivalent representations"
+  },
+  {
+    "id": "bug-004",
+    "category": "type-error",
+    "function_name": "join_names",
+    "broken_code": "def join_names(names):\n    result = \"\"\n    for name in names:\n        result += name + \", \"\n    return result[:-2]\n",
+    "description": "The function fails when a name is not already a string",
+    "hint": "Normalize item types before joining"
+  },
+  {
+    "id": "bug-005",
+    "category": "algorithm",
+    "function_name": "binary_search",
+    "broken_code": "def binary_search(nums, target):\n    low = 0\n    high = len(nums)\n    while low < high:\n        mid = (low + high) // 2\n        if nums[mid] == target:\n            return mid\n        if nums[mid] < target:\n            low = mid\n        else:\n            high = mid\n    return -1\n",
+    "description": "The search can get stuck because bounds do not move past mid",
+    "hint": "Advance the lower or upper bound beyond the midpoint"
+  },
+  {
+    "id": "bug-006",
+    "category": "logic",
+    "function_name": "count_vowels",
+    "broken_code": "def count_vowels(text):\n    count = 0\n    for ch in text:\n        if ch in \"aeiou\":\n            count += 1\n    return count\n",
+    "description": "Uppercase vowels are ignored",
+    "hint": "Normalize case during comparison"
+  },
+  {
+    "id": "bug-007",
+    "category": "edge-case",
+    "function_name": "max_or_none",
+    "broken_code": "def max_or_none(nums):\n    best = nums[0]\n    for n in nums:\n        if n > best:\n            best = n\n    return best\n",
+    "description": "The function crashes on empty lists",
+    "hint": "Return a sentinel for empty input"
+  },
+  {
+    "id": "bug-008",
+    "category": "off-by-one",
+    "function_name": "drop_last",
+    "broken_code": "def drop_last(items):\n    result = []\n    for i in range(len(items) - 2):\n        result.append(items[i])\n    return result\n",
+    "description": "The function drops two items instead of one",
+    "hint": "Check the end index"
+  },
+  {
+    "id": "bug-009",
+    "category": "type-error",
+    "function_name": "total_prices",
+    "broken_code": "def total_prices(items):\n    total = 0\n    for item in items:\n        total += item[\"price\"]\n    return round(total, 2)\n",
+    "description": "Price values may arrive as strings",
+    "hint": "Convert prices before addition"
+  },
+  {
+    "id": "bug-010",
+    "category": "algorithm",
+    "function_name": "merge_sorted",
+    "broken_code": "def merge_sorted(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    return result\n",
+    "description": "Remaining values are discarded after one list is exhausted",
+    "hint": "Append both tails"
+  },
+  {
+    "id": "bug-011",
+    "category": "logic",
+    "function_name": "normalize_email_1",
+    "broken_code": "def normalize_email_1(email):\n    parts = email.split(\"@\")\n    return parts[0].strip().lower() + \"@\" + parts[1]\n",
+    "description": "Domain casing and whitespace are not normalized",
+    "hint": "Normalize both sides of the address"
+  },
+  {
+    "id": "bug-012",
+    "category": "off-by-one",
+    "function_name": "window_totals_1",
+    "broken_code": "def window_totals_1(nums, size):\n    totals = []\n    for i in range(len(nums) - size):\n        totals.append(sum(nums[i:i + size]))\n    return totals\n",
+    "description": "The final complete window is skipped",
+    "hint": "Check inclusive window count"
+  },
+  {
+    "id": "bug-013",
+    "category": "type-error",
+    "function_name": "increment_counts_1",
+    "broken_code": "def increment_counts_1(counts, key):\n    counts[key] = counts.get(key, \"0\") + 1\n    return counts\n",
+    "description": "Missing counts are stored as strings before arithmetic",
+    "hint": "Keep count values numeric"
+  },
+  {
+    "id": "bug-014",
+    "category": "edge-case",
+    "function_name": "first_non_empty_1",
+    "broken_code": "def first_non_empty_1(values):\n    for value in values:\n        if value != \"\":\n            return value\n    return values[0]\n",
+    "description": "All-empty input crashes or returns the wrong sentinel",
+    "hint": "Decide what no match should mean"
+  },
+  {
+    "id": "bug-015",
+    "category": "algorithm",
+    "function_name": "dedupe_preserve_order_1",
+    "broken_code": "def dedupe_preserve_order_1(items):\n    seen = set()\n    result = []\n    for item in items:\n        if item in seen:\n            result.append(item)\n        seen.add(item)\n    return result\n",
+    "description": "The function returns duplicates instead of first occurrences",
+    "hint": "Invert the membership condition"
+  },
+  {
+    "id": "bug-016",
+    "category": "logic",
+    "function_name": "parse_bool_1",
+    "broken_code": "def parse_bool_1(value):\n    if value:\n        return True\n    if value in (\"false\", \"0\", \"no\"):\n        return False\n    return False\n",
+    "description": "Non-empty false strings are treated as true",
+    "hint": "Handle strings before truthiness"
+  },
+  {
+    "id": "bug-017",
+    "category": "off-by-one",
+    "function_name": "middle_items_1",
+    "broken_code": "def middle_items_1(items):\n    result = []\n    for i in range(1, len(items) - 2):\n        result.append(items[i])\n    return result\n",
+    "description": "The function removes two items from the end",
+    "hint": "Review the slice boundary"
+  },
+  {
+    "id": "bug-018",
+    "category": "type-error",
+    "function_name": "apply_discount_1",
+    "broken_code": "def apply_discount_1(price, percent):\n    discount = price * percent / 100\n    return round(price - discount, 2)\n",
+    "description": "String inputs from forms cause arithmetic failures",
+    "hint": "Convert numeric inputs explicitly"
+  },
+  {
+    "id": "bug-019",
+    "category": "edge-case",
+    "function_name": "last_completed_1",
+    "broken_code": "def last_completed_1(tasks):\n    completed = [task for task in tasks if task[\"done\"]]\n    return completed[-1][\"title\"]\n",
+    "description": "No completed tasks causes an index error",
+    "hint": "Return a safe value when the filtered list is empty"
+  },
+  {
+    "id": "bug-020",
+    "category": "algorithm",
+    "function_name": "rotate_left_1",
+    "broken_code": "def rotate_left_1(items, steps):\n    for _ in range(steps):\n        first = items.pop(0)\n        items.append(first)\n    return items\n",
+    "description": "Rotating an empty list crashes and large steps are inefficient",
+    "hint": "Handle empty input and normalize steps"
+  },
+  {
+    "id": "bug-021",
+    "category": "logic",
+    "function_name": "is_business_day_1",
+    "broken_code": "def is_business_day_1(day):\n    weekends = [\"Saturday\", \"Sunday\"]\n    return day in weekends\n",
+    "description": "Weekend detection is reversed",
+    "hint": "Return true for weekdays"
+  },
+  {
+    "id": "bug-022",
+    "category": "off-by-one",
+    "function_name": "take_until_1",
+    "broken_code": "def take_until_1(items, stop):\n    result = []\n    for item in items:\n        result.append(item)\n        if item == stop:\n            break\n    return result\n",
+    "description": "The stop item is included when it should be excluded",
+    "hint": "Check when to append"
+  },
+  {
+    "id": "bug-023",
+    "category": "type-error",
+    "function_name": "format_user_1",
+    "broken_code": "def format_user_1(user):\n    return user[\"first\"] + \" \" + user.get(\"last\")\n",
+    "description": "Missing last names produce string concatenation errors",
+    "hint": "Use a string default"
+  },
+  {
+    "id": "bug-024",
+    "category": "edge-case",
+    "function_name": "ratio_1",
+    "broken_code": "def ratio_1(part, whole):\n    return round(part / whole, 4)\n",
+    "description": "Division by zero is not handled",
+    "hint": "Define behavior for zero denominator"
+  },
+  {
+    "id": "bug-025",
+    "category": "algorithm",
+    "function_name": "flatten_once_1",
+    "broken_code": "def flatten_once_1(values):\n    result = []\n    for value in values:\n        result.append(value)\n        if isinstance(value, list):\n            result.extend(value)\n    return result\n",
+    "description": "Nested lists are included twice",
+    "hint": "Append scalars and extend lists"
+  },
+  {
+    "id": "bug-026",
+    "category": "logic",
+    "function_name": "normalize_email_2",
+    "broken_code": "def normalize_email_2(email):\n    parts = email.split(\"@\")\n    return parts[0].strip().lower() + \"@\" + parts[1]\n",
+    "description": "Domain casing and whitespace are not normalized",
+    "hint": "Normalize both sides of the address"
+  },
+  {
+    "id": "bug-027",
+    "category": "off-by-one",
+    "function_name": "window_totals_2",
+    "broken_code": "def window_totals_2(nums, size):\n    totals = []\n    for i in range(len(nums) - size):\n        totals.append(sum(nums[i:i + size]))\n    return totals\n",
+    "description": "The final complete window is skipped",
+    "hint": "Check inclusive window count"
+  },
+  {
+    "id": "bug-028",
+    "category": "type-error",
+    "function_name": "increment_counts_2",
+    "broken_code": "def increment_counts_2(counts, key):\n    counts[key] = counts.get(key, \"0\") + 1\n    return counts\n",
+    "description": "Missing counts are stored as strings before arithmetic",
+    "hint": "Keep count values numeric"
+  },
+  {
+    "id": "bug-029",
+    "category": "edge-case",
+    "function_name": "first_non_empty_2",
+    "broken_code": "def first_non_empty_2(values):\n    for value in values:\n        if value != \"\":\n            return value\n    return values[0]\n",
+    "description": "All-empty input crashes or returns the wrong sentinel",
+    "hint": "Decide what no match should mean"
+  },
+  {
+    "id": "bug-030",
+    "category": "algorithm",
+    "function_name": "dedupe_preserve_order_2",
+    "broken_code": "def dedupe_preserve_order_2(items):\n    seen = set()\n    result = []\n    for item in items:\n        if item in seen:\n            result.append(item)\n        seen.add(item)\n    return result\n",
+    "description": "The function returns duplicates instead of first occurrences",
+    "hint": "Invert the membership condition"
+  },
+  {
+    "id": "bug-031",
+    "category": "logic",
+    "function_name": "parse_bool_2",
+    "broken_code": "def parse_bool_2(value):\n    if value:\n        return True\n    if value in (\"false\", \"0\", \"no\"):\n        return False\n    return False\n",
+    "description": "Non-empty false strings are treated as true",
+    "hint": "Handle strings before truthiness"
+  },
+  {
+    "id": "bug-032",
+    "category": "off-by-one",
+    "function_name": "middle_items_2",
+    "broken_code": "def middle_items_2(items):\n    result = []\n    for i in range(1, len(items) - 2):\n        result.append(items[i])\n    return result\n",
+    "description": "The function removes two items from the end",
+    "hint": "Review the slice boundary"
+  },
+  {
+    "id": "bug-033",
+    "category": "type-error",
+    "function_name": "apply_discount_2",
+    "broken_code": "def apply_discount_2(price, percent):\n    discount = price * percent / 100\n    return round(price - discount, 2)\n",
+    "description": "String inputs from forms cause arithmetic failures",
+    "hint": "Convert numeric inputs explicitly"
+  },
+  {
+    "id": "bug-034",
+    "category": "edge-case",
+    "function_name": "last_completed_2",
+    "broken_code": "def last_completed_2(tasks):\n    completed = [task for task in tasks if task[\"done\"]]\n    return completed[-1][\"title\"]\n",
+    "description": "No completed tasks causes an index error",
+    "hint": "Return a safe value when the filtered list is empty"
+  },
+  {
+    "id": "bug-035",
+    "category": "algorithm",
+    "function_name": "rotate_left_2",
+    "broken_code": "def rotate_left_2(items, steps):\n    for _ in range(steps):\n        first = items.pop(0)\n        items.append(first)\n    return items\n",
+    "description": "Rotating an empty list crashes and large steps are inefficient",
+    "hint": "Handle empty input and normalize steps"
+  },
+  {
+    "id": "bug-036",
+    "category": "logic",
+    "function_name": "is_business_day_2",
+    "broken_code": "def is_business_day_2(day):\n    weekends = [\"Saturday\", \"Sunday\"]\n    return day in weekends\n",
+    "description": "Weekend detection is reversed",
+    "hint": "Return true for weekdays"
+  },
+  {
+    "id": "bug-037",
+    "category": "off-by-one",
+    "function_name": "take_until_2",
+    "broken_code": "def take_until_2(items, stop):\n    result = []\n    for item in items:\n        result.append(item)\n        if item == stop:\n            break\n    return result\n",
+    "description": "The stop item is included when it should be excluded",
+    "hint": "Check when to append"
+  },
+  {
+    "id": "bug-038",
+    "category": "type-error",
+    "function_name": "format_user_2",
+    "broken_code": "def format_user_2(user):\n    return user[\"first\"] + \" \" + user.get(\"last\")\n",
+    "description": "Missing last names produce string concatenation errors",
+    "hint": "Use a string default"
+  },
+  {
+    "id": "bug-039",
+    "category": "edge-case",
+    "function_name": "ratio_2",
+    "broken_code": "def ratio_2(part, whole):\n    return round(part / whole, 4)\n",
+    "description": "Division by zero is not handled",
+    "hint": "Define behavior for zero denominator"
+  },
+  {
+    "id": "bug-040",
+    "category": "algorithm",
+    "function_name": "flatten_once_2",
+    "broken_code": "def flatten_once_2(values):\n    result = []\n    for value in values:\n        result.append(value)\n        if isinstance(value, list):\n            result.extend(value)\n    return result\n",
+    "description": "Nested lists are included twice",
+    "hint": "Append scalars and extend lists"
+  }
+]
