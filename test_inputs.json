@@ -1,0 +1,542 @@
+[
+  {
+    "id": "browser-001",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-002",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-003",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-004",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-005",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-006",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-007",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-008",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-009",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-010",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-011",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  },
+  {
+    "id": "browser-012",
+    "task": "Find the overdue invoice for Acme Ltd and submit a follow-up note.",
+    "initial_page": "customer_search",
+    "pages": [
+      {
+        "id": "customer_search",
+        "elements": [
+          "search_input",
+          "search_button"
+        ],
+        "data": {
+          "query": "Acme Ltd"
+        }
+      },
+      {
+        "id": "customer_profile",
+        "elements": [
+          "invoices_tab",
+          "notes_tab"
+        ],
+        "data": {
+          "customer": "Acme Ltd"
+        }
+      },
+      {
+        "id": "invoices",
+        "elements": [
+          "invoice_rows"
+        ],
+        "data": {
+          "overdue_invoice": "INV-1042",
+          "amount": "$1,200"
+        }
+      },
+      {
+        "id": "notes",
+        "elements": [
+          "note_textarea",
+          "submit_button"
+        ],
+        "data": {}
+      }
+    ]
+  }
+]
