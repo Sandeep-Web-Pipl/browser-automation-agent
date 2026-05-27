@@ -72,7 +72,10 @@ def build_prompt(task: str, pages: list) -> str:
 # Claude API call
 # ---------------------------------------------------------------------------
 def call_claude(task: str, pages: list) -> dict:
-    import anthropic
+    try:
+        import anthropic
+    except ImportError:
+        raise RuntimeError("anthropic not installed")
     client = anthropic.Anthropic()
     msg = client.messages.create(
         model=MODEL,
